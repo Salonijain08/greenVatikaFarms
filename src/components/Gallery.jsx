@@ -67,7 +67,7 @@ export default function Gallery() {
         </div>
 
         {/* Thumbnails */}
-        <div className="carousel-thumbs">
+        {/* <div className="carousel-thumbs">
           {images.map((img, i) => (
             <div
               key={i}
@@ -77,7 +77,7 @@ export default function Gallery() {
               <img src={img.src} alt={img.caption} />
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* Dots */}
         <div className="carousel-dots">
