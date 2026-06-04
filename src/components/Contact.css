@@ -1,0 +1,181 @@
+.contact {
+  background: var(--off-white);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.contact-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.contact-info .section-title {
+  text-align: left;
+  margin-bottom: 6px;
+}
+
+.contact-desc {
+  color: var(--text-gray);
+  line-height: 1.8;
+  margin-bottom: 32px;
+  font-size: 0.95rem;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.contact-detail-icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.contact-detail strong {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--green-dark);
+  margin-bottom: 2px;
+}
+
+.contact-detail p {
+  font-size: 0.88rem;
+  color: var(--text-gray);
+}
+
+/* Form */
+.contact-form-col {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.form-group input,
+.form-group textarea {
+  border: 1.5px solid #ddd;
+  border-radius: 6px;
+  padding: 11px 14px;
+  font-size: 0.92rem;
+  font-family: inherit;
+  transition: border-color 0.25s;
+  background: var(--white);
+  color: var(--text-dark);
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--green-primary);
+}
+
+.form-group input.error,
+.form-group textarea.error {
+  border-color: #e53935;
+}
+
+.phone-input-wrap {
+  display: flex;
+  align-items: stretch;
+  border: 1.5px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: border-color 0.25s;
+}
+
+.phone-input-wrap:focus-within {
+  border-color: var(--green-primary);
+}
+
+.country-code {
+  background: #f0f7f4;
+  color: var(--green-dark);
+  font-weight: 700;
+  padding: 11px 14px;
+  font-size: 0.92rem;
+  border-right: 1.5px solid #ddd;
+  flex-shrink: 0;
+}
+
+.phone-input-wrap input {
+  border: none;
+  border-radius: 0;
+  flex: 1;
+}
+
+.phone-input-wrap input:focus {
+  border-color: transparent;
+}
+
+.err-msg {
+  color: #e53935;
+  font-size: 0.8rem;
+}
+
+.contact-submit {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+}
+
+/* Thank you */
+.thank-you {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.thank-you-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.thank-you h3 {
+  font-size: 1.5rem;
+  color: var(--green-dark);
+  margin-bottom: 10px;
+}
+
+.thank-you p {
+  color: var(--text-gray);
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-form-col {
+    padding: 28px 20px;
+  }
+}

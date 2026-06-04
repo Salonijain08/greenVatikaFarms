@@ -1,0 +1,154 @@
+.floorplan {
+  background: var(--off-white);
+}
+
+/* Single sitemap layout */
+.floorplan-single {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.sitemap-img-wrap {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  border: 3px solid #d4ede3;
+}
+
+.sitemap-img-wrap img {
+  width: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.sitemap-info h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--green-dark);
+  margin-bottom: 14px;
+}
+
+.sitemap-info p {
+  font-size: 0.95rem;
+  color: var(--text-gray);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.sitemap-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.sitemap-tags span {
+  background: #e8f5ee;
+  color: var(--green-dark);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #c2dfd0;
+}
+
+@media (max-width: 768px) {
+  .floorplan-single {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+.plan-card {
+  background: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.plan-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.14);
+}
+
+.plan-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.plan-img img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s;
+}
+
+.plan-card:hover .plan-img img {
+  transform: scale(1.05);
+}
+
+.plan-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(30, 66, 9, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.plan-card:hover .plan-overlay {
+  opacity: 1;
+}
+
+.plan-info {
+  padding: 20px;
+}
+
+.plan-info h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--green-dark);
+  margin-bottom: 6px;
+}
+
+.plan-info p {
+  font-size: 0.85rem;
+  color: var(--text-gray);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.plan-btn {
+  background: none;
+  border: 2px solid var(--green-primary);
+  color: var(--green-primary);
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.plan-btn:hover {
+  background: var(--green-primary);
+  color: var(--white);
+}
+
+@media (max-width: 900px) {
+  .floorplan-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 580px) {
+  .floorplan-grid {
+    grid-template-columns: 1fr;
+  }
+}

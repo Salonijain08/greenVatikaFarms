@@ -1,0 +1,150 @@
+.configuration {
+  background: var(--green-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+.configuration::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 300px;
+  height: 300px;
+  background: rgba(200, 169, 81, 0.08);
+  border-radius: 50%;
+}
+
+.configuration .section-title {
+  color: var(--white);
+}
+
+.configuration .section-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.configuration .section-title::after {
+  background: var(--gold);
+}
+
+.config-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.config-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 32px 24px 28px;
+  text-align: center;
+  position: relative;
+  transition: background 0.3s, transform 0.3s, border-color 0.3s;
+}
+
+.config-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-6px);
+  border-color: rgba(200, 169, 81, 0.5);
+}
+
+.config-card.highlighted {
+  background: rgba(200, 169, 81, 0.15);
+  border-color: var(--gold);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gold);
+  color: var(--white);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.config-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.config-size {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1;
+}
+
+.config-unit {
+  font-size: 0.85rem;
+  color: var(--gold-light);
+  letter-spacing: 1px;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.config-rate {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 6px;
+  font-style: italic;
+}
+
+.config-divider {
+  width: 40px;
+  height: 2px;
+  background: rgba(200, 169, 81, 0.5);
+  margin: 16px auto;
+  border-radius: 2px;
+}
+
+.config-features {
+  list-style: none;
+  margin-bottom: 24px;
+}
+
+.config-features li {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.82rem;
+  padding: 4px 0;
+}
+
+.config-btn {
+  width: 100%;
+  background: transparent;
+  border: 2px solid var(--gold);
+  color: var(--gold);
+}
+
+.config-btn:hover {
+  background: var(--gold);
+  color: var(--white);
+  transform: none;
+}
+
+.config-card.highlighted .config-btn {
+  background: var(--gold);
+  color: var(--white);
+}
+
+.config-card.highlighted .config-btn:hover {
+  background: #cc5c0a;
+}
+
+@media (max-width: 900px) {
+  .config-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 540px) {
+  .config-grid {
+    grid-template-columns: 1fr;
+  }
+}
